@@ -1,19 +1,60 @@
-.barra_navegacion{
-    background-color: red;
-    padding: 5px;
-}
 *{
     padding: 0px;
     margin: 0px;
 }
+.marco_principal{
+    background-color: white;
+}
+.barra_navegacion{
+    background-color: red;
+    padding: 0px;
+    width: 100%;
+    display: inline-flex;
+}
 .navegacion{
+    position:relative;
+    display: inline-flex;
+    width: 80%;
     margin: auto;
 }
-ul, ol{
+.navegacion li{
     list-style: none;
+    display: block;
+    width: 150px;
+    padding: 10px 15px;
+    text-align: center;
+    background-color:red;
 }
-
+.navegacion li a{
+    text-decoration: none;
+    color: white;
+}
+.navegacion li:hover{
+    background-color: palevioletred;
+    transition: all .3s;
+}
+.submenu_inicio{
+    position: absolute;
+    top:45px;
+    visibility: hidden;
+}
+.submenu_inicio li a{
+    display: block;
+}
+.submenu{
+    position: absolute;
+    top: 45px;
+    left:180px;
+    visibility: hidden;
+}
+.submenu li a{
+    display: block;
+}
+.navegacion li:hover .submenu_inicio{
+    visibility: visible;
+}
 #logo{
-    width: 250px;
-    height: 125px;
+    width: 100px;
+    height: 50px;
+    object-fit: cover;
 }

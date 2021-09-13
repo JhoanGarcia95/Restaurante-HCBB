@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>HCBB Restaurante</title>
+    <link rel="icon" href="imagenes/logo_prueba.png">
+    <link rel="stylesheet" href="CSS/estilo_base.css">
 </head>
 <body>
     <div class="marco_principal">
         <nav class="barra_navegacion">
             <img src="imagenes/Logo.svg" id="logo" alt="Logo">
             <ul class="navegacion">
-                <li>Inicio</li>
+                <li><a target="_self" href="Principal.html"><h3>Inicio</h3></a></li>
                     <ul class="submenu_inicio">
-                        <li>Quiénes somos</li>
-                        <li>Nuestra comida</li>
-                        <li>Dónde estamos ubicados</li>
+                        <li><a href=""><h3>Quiénes somos</h3></a></li>
+                        <li><a href=""><h3>Nuestra comida</h3></a</li>
+                        <li><a href=""><h3>Dónde estamos</h3></a</li>
                     </ul>
-                <li>Menú</li>
+                <li><a target=_self href="Menu.html"><h3>Menú</h3></a></li>
                     <ul class="submenu">
-                        <li>Menú semanal</li>
-                        <li>Platos especiales</li>
+                        <li><a href=""><h3>Menú semanal</h3></a</li>
+                        <li><a href=""><h3>Platos especiales</h3></a</li>
                     </ul>
-                <li>Contáctanos</li>
+                <li><a target="_self" href="Contacto.html"><h3>Contáctanos</h3></a></li>
             </ul>
         </nav>
 
@@ -39,7 +41,15 @@
                 <option>Plato 2</option>
                 <option>Plato 3</option>
                 <option>Plato 4</option>
-            </select>
+            </select><br><br>
+            <label for="descripcion">Agrega la descripción del plato</label><br>
+            <textarea name="descripcion" id="descripcion" cols="40" rows="10"></textarea><br><br>
+            <label for="precio">¿Cuál será su precio de venta? $</label>
+            <input type="number" name="precio" id="precio" min="0" max="100000" step="1000" value="8000"><br><br>
+            <label for="img_plato">Agrega una imagen de cómo luce el plato</label><br>
+            <input type="file" name="img_plato" id="img_plato"><br><br>
+            <input type="submit" name="enviar" value="Guardar">
+            <input type="reset" value="Cancelar">
         </form>
 
         <footer>Pie de página</footer>
