@@ -1,0 +1,19 @@
+.barra_navegacion{
+    background-color: red;
+    padding: 5px;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.navegacion{
+    margin: auto;
+}
+ul, ol{
+    list-style: none;
+}
+
+#logo{
+    width: 250px;
+    height: 125px;
+}
