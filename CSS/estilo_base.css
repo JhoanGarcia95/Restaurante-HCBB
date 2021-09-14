@@ -7,52 +7,51 @@
 }
 .barra_navegacion{
     background-color: red;
-    padding: 0px;
-    width: 100%;
-    display: inline-flex;
+    width: 90%;
+    height: 50px;
+    margin: 20px auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    display:inline-flex;
 }
-.navegacion{
-    position:relative;
-    display: inline-flex;
-    width: 80%;
-    margin: auto;
-}
-.navegacion li{
+.barra_navegacion ul{
     list-style: none;
+}
+.navegacion > li{
+    position: relative;
+    display: inline-block;
+}
+.navegacion > li > a{
     display: block;
-    width: 150px;
-    padding: 10px 15px;
-    text-align: center;
-    background-color:red;
-}
-.navegacion li a{
-    text-decoration: none;
+    padding: 5px 30px;
     color: white;
+    text-decoration: none;
 }
-.navegacion li:hover{
+.navegacion li a:hover{
     background-color: palevioletred;
     transition: all .3s;
 }
-.submenu_inicio{
+/*Submenus*/
+.submenu_inicio, .submenu{
     position: absolute;
-    top:45px;
+    width: 180%;
+    text-align: center;
+    background-color: red;
     visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s;
 }
-.submenu_inicio li a{
+.submenu_inicio li a, .submenu li a{
     display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
 }
-.submenu{
-    position: absolute;
-    top: 45px;
-    left:180px;
-    visibility: hidden;
-}
-.submenu li a{
-    display: block;
-}
-.navegacion li:hover .submenu_inicio{
+.navegacion li:hover .submenu_inicio, .navegacion li:hover .submenu{
     visibility: visible;
+    opacity: 1;
 }
+
 #logo{
     width: 100px;
     height: 50px;
