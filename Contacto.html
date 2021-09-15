@@ -4,59 +4,61 @@
     <meta charset="UTF-8">   
     <title>Restaurante-HCBB</title>
     <link rel="icon" href="imagenes/diningrestaurant_comedo_4485.ico">
-    <!--<link rel="stylesheet" href="CSS/estilo_base.css">-->
+    <link rel="stylesheet" href="CSS/estilo_base.css">
 </head>
 
 <body>  
+  <div class="marco_principal">
+    <div class="contenido">
+      <nav class="barra_navegacion">
+        <img src="imagenes/Logo.svg" id="logo" alt="Logo">
+        <ul class="navegacion">
+            <li><a target="_self" href="Principal.html"><h3>Inicio</h3></a>
+                <ul class="submenu_inicio">
+                    <li><a href=""><h3>Quiénes somos</h3></a></li>
+                    <li><a href=""><h3>Nuestra comida</h3></a</li>
+                    <li><a href=""><h3>Dónde estamos</h3></a</li>
+                </ul>
+            </li>
+            <li><a target=_self href="Menu.html"><h3>Menú</h3></a>
+                <ul class="submenu">
+                    <li><a href="Menu.html#menu_semanal"><h3>Menú semanal</h3></a</li>
+                    <li><a href="Menu.html#platos_especiales"><h3>Platos especiales</h3></a</li>
+                </ul>
+            </li>
+            <li><a target="_self" href="Contacto.html"><h3>Contáctanos</h3></a>
+            </li>
+        </ul>
+      </nav>
+        
+      <div class="contact_form">
+      
+          <div class="formulario">      
+            <h1>Formulario de contacto</h1>
+              <h3>Escríbenos y en breve nos pondremos en contacto contigo</h3>
+              
+              <form action="/action_page.php">
+                <label for="nombre">Nombres:</label><br>
+                <input type="text" id="nombre" name="nombre" value=""><br>
+                <label for="apellido">Apelllido:</label><br>
+                <input type="text" id="apellido" name="apellido" value=""><br>
+                <label for="telefono">Teléfono:</label><br>
+                <input type="text" id="telefono" name="telefono" value=""><br>
+                <label for="mensaje">Mensaje:</label><br>
+                <textarea name="mensaje" rows="10" cols="30"></textarea><br><br>
+                <input type="button" value="Enviar">
+              </form>
 
-  <nav class="barra_navegacion">
-    <img src="imagenes/Logo.svg" id="logo" alt="Logo" width="400px"> 
-    <ul class="navegacion">
-        <li><a target="_self" href="Principal.html"><h3>Inicio</h3></a>
-            <ul class="submenu_inicio">
-                <li><a href=""><h3>Quiénes somos</h3></a></li>
-                <li><a href=""><h3>Nuestra comida</h3></a</li>
-                <li><a href=""><h3>Dónde estamos</h3></a</li>
-            </ul>
-        </li>
-        <li><a target=_self href="Menu.html"><h3>Menú</h3></a>
-            <ul class="submenu">
-                <li><a href=""><h3>Menú semanal</h3></a</li>
-                <li><a href=""><h3>Platos especiales</h3></a</li>
-            </ul>
-        </li>
-        <li><a target="_self" href="Contacto.html"><h3>Contáctanos</h3></a>
-        </li>
-    </ul>
-</nav>
-    
-    <div class="contact_form">
-  
-      <div class="formulario">      
-        <h1>Formulario de contacto</h1>
-          <h3>Escríbenos y en breve nos pondremos en contacto contigo</h3>
-          
-          <form>
-            <label for="nombre">Nombres:</label><br>
-            <input type="text" id="nombre" name="nombre" value=""><br>
-            <label for="apellido">Apelllido:</label><br>
-            <input type="text" id="apellido" name="apellido" value=""><br>
-            <label for="telefono">Teléfono:</label><br>
-            <input type="text" id="telefono" name="telefono" value=""><br>
-            <label for="mensaje">Mensaje:</label><br>
-            <form action="/action_page.php">
-            <textarea name="mensaje" rows="10" cols="30"></textarea><br><br>
-            <input type="button" value="Enviar">
-
-          </form>
-
+              <footer>
+                <p>Visitanos en www.restaurante-hcbb.com</p> 
+                <img src="imagenes/logo_facebook.png" alt="" width="50" height="50">
+                <img src="imagenes/logo_whatsapp.png" alt="" width="50" height="50">
+                <img src="imagenes/logo_instagram.png" alt="" width="50" height="50">
+                <a href="Administrador.html" id="ingresar"><strong>Ingreso empleados</strong></a>
+              </footer>
+          </div>
+      </div>
+    </div>
+  </div>
 </body> 
-
-<footer>
-  <p>Visitanos en www.restaurante-hcbb.com</p> 
-  <img src="imagenes/logo_facebook.png" alt="" width="50" height="50">
-  <img src="imagenes/logo_whatsapp.png" alt="" width="50" height="50">
-  <img src="imagenes/logo_instagram.jpg" alt="" width="50" height="50">
-</footer>
-
 </html>   
