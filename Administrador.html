@@ -20,41 +20,48 @@
                 </li>
                 <li><a target=_self href="Menu.html"><h3>Menú</h3></a>
                     <ul class="submenu">
-                        <li><a href=""><h3>Menú semanal</h3></a</li>
-                        <li><a href=""><h3>Platos especiales</h3></a</li>
+                        <li><a href="Menu.html#menu_semanal"><h3>Menú semanal</h3></a</li>
+                        <li><a href="Menu.html#platos_especiales"><h3>Platos especiales</h3></a</li>
                     </ul>
                 </li>
                 <li><a target="_self" href="Contacto.html"><h3>Contáctanos</h3></a>
                 </li>
             </ul>
         </nav>
-        <h1>¿Cuál es nuestro próximo menú?</h1>
-        <form id="modificacion_menu">
-            <label for="modif_menu">¿Qué deseas hacer hoy?</label><br>
-            <input type="radio" id="nuevo_menu" name="actualizacion_menu" value="Agregar">
-            <label for="nuevo_menu">Agregar un nuevo plato</label>
-            <input type="radio" id="cambiar_menu" name="actualizacion_menu" value="Actualizar">
-            <label for="cambiar_menu">Actualizar un plato</label><br><br>
-            <label for="seleccion_plato">Selecciona el plato que deseas actualizar</label><br>
-            <!--Lista de selección para cuando se desea modificar los atributos de un menú ya existente-->
-            <select name="seleccion_plato" id="lista_seleccion">
-                <option>---------</option>
-                <option>Plato 1</option>
-                <option>Plato 2</option>
-                <option>Plato 3</option>
-                <option>Plato 4</option>
-            </select><br><br>
-            <label for="descripcion">Agrega la descripción del plato</label><br>
-            <textarea name="descripcion" id="descripcion" cols="40" rows="10"></textarea><br><br>
-            <label for="precio">¿Cuál será su precio de venta? $</label>
-            <input type="number" name="precio" id="precio" min="0" max="100000" step="1000" value="8000"><br><br>
-            <label for="img_plato">Agrega una imagen de cómo luce el plato</label><br>
-            <input type="file" name="img_plato" id="img_plato"><br><br>
-            <input type="submit" name="enviar" value="Guardar">
-            <input type="reset" value="Cancelar">
-        </form>
-
-        <footer>Pie de página</footer>
+        <div class="contenido">
+            <h1>¿Cuál es nuestro próximo menú?</h1>
+            <form id="modificacion_menu">
+                <label for="modif_menu">¿Qué deseas hacer hoy?</label><br>
+                <input type="radio" id="nuevo_menu" name="actualizacion_menu" value="Agregar">
+                <label for="nuevo_menu">Agregar un nuevo plato</label>
+                <input type="radio" id="cambiar_menu" name="actualizacion_menu" value="Actualizar">
+                <label for="cambiar_menu">Actualizar un plato</label><br><br>
+                <label for="seleccion_plato">Selecciona el plato que deseas actualizar</label><br>
+                <!--Lista de selección para cuando se desea modificar los atributos de un menú ya existente-->
+                <select name="seleccion_plato" id="lista_seleccion">
+                    <option>---------</option>
+                    <option>Plato 1</option>
+                    <option>Plato 2</option>
+                    <option>Plato 3</option>
+                    <option>Plato 4</option>
+                </select><br><br>
+                <label for="descripcion">Agrega la descripción del plato</label><br>
+                <textarea name="descripcion" id="descripcion" cols="40" rows="10"></textarea><br><br>
+                <label for="precio">¿Cuál será su precio de venta? $</label>
+                <input type="number" name="precio" id="precio" min="0" max="100000" step="1000" value="8000"><br><br>
+                <label for="img_plato">Agrega una imagen de cómo luce el plato</label><br>
+                <input type="file" name="img_plato" id="img_plato"><br><br>
+                <input type="submit" name="enviar" value="Guardar">
+                <input type="reset" value="Cancelar">
+            </form>
+        </div>
+        <footer>
+            <p>Visitanos en www.restaurante-hcbb.com</p> 
+            <img src="imagenes/logo_facebook.png" alt="" width="50" height="50">
+            <img src="imagenes/logo_whatsapp.png" alt="" width="50" height="50">
+            <img src="imagenes/logo_instagram.png" alt="" width="50" height="50">
+            <a href="Administrador.html" id="ingresar"><strong>Ingreso empleados</strong></a>
+        </footer>
     </div>
 </body>
 </html>
