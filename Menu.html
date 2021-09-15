@@ -7,87 +7,92 @@
     <link rel="stylesheet" href="CSS/estilo_base.css">
 </head>
 <body>
-    <nav class="barra_navegacion">
-        <img src="imagenes/Logo.svg" id="logo" alt="Logo" width="400px">
-        <ul class="navegacion">
-            <li><a target="_self" href="Principal.html"><h3>Inicio</h3></a>
-                <ul class="submenu_inicio">
-                    <li><a href=""><h3>Quiénes somos</h3></a></li>
-                    <li><a href=""><h3>Nuestra comida</h3></a</li>
-                    <li><a href=""><h3>Dónde estamos</h3></a</li>
-                </ul>
-            </li>
-            <li><a target=_self href="Menu.html"><h3>Menú</h3></a>
-                <ul class="submenu">
-                    <li><a href=""><h3>Menú semanal</h3></a</li>
-                    <li><a href=""><h3>Platos especiales</h3></a</li>
-                </ul>
-            </li>
-            <li><a target="_self" href="Contacto.html"><h3>Contáctanos</h3></a>
-            </li>
-        </ul>
-    </nav>
-    <section>
-        <h1>Menú semanal</h1><br>
-        <p>Escoge el día y plato que deseas reservar</p><br>
-        <button style="font-size: x-large; padding: 1%;"><strong>Lunes</strong></button>            
-        <button style="font-size: x-large; padding: 1%;"><strong>Martes</strong></button>
-        <button style="font-size: x-large; padding: 1%;"><strong>Miércoles</strong></button>
-        <button style="font-size: x-large; padding: 1%;"><strong>Jueves</strong></button>
-        <button style="font-size: x-large; padding: 1%;"><strong>Viernes</strong></button>
-        <button style="font-size: x-large; padding: 1%;"><strong>Sábado</strong></button>
-    </section>
-    <section>
-        <h2>Platos Especiales</h2>
-        <p>Esto son nuestros platos</p>
-        <div class="row">
-            <div class="column">
-                <p><b>Plato 1</b></p>
-                <img src="imagenes/Plato1.jpg" alt="Plato 1" style="width: 400px;" >
-            </div>
-            <div class="column">
-                <p><b>Plato 2</b></p>
-                <img src="imagenes/Plato2.jpg" alt="Plato 2" style="width: 400px;">
-            </div>
-            <div class="column">
-                <p><b>Plato 3</b></p>
-                <img src="imagenes/Plato3.jpg" alt="Plato 3" style="width: 400px;">
-            </div>
-            <div class="column">
-                <p><b>Plato 4</b></p>
-                <img src="imagenes/Plato4.jpg" alt="Plato 4" style="width: 400px;">
-            </div>
-            <div class="column">
-                <p><b>Plato 5</b></p>
-                <img src="imagenes/Plato5.jpg" alt="Plato 5" style="width: 400px;">
-            </div>
-            <div class="column">
-                <p><b>Plato 6</b></p>
-                <img src="imagenes/Plato6.jpg" alt="Plato 6" style="width: 400px;">
-            </div>
-            <div class="column">
-                <p><b>Plato 7</b></p>
-                <img src="imagenes/Plato7.jpg" alt="Plato 7" style="width: 400px;">
-            </div>
-            <div class="column">
-                <p><b>Plato 8</b></p>
-                <img src="imagenes/Plato8.jpg" alt="Plato 8" style="width: 400px;">
-            </div>
-            <div class="column">
-                <p><b>Plato 9</b></p>
-                <img src="imagenes/Plato9.jpg" alt="Plato 9" style="width: 400px;">
-            </div>
-            <div class="column">
-                <p><b>Plato 10</b></p>
-                <img src="imagenes/Plato10.jpg" alt="Plato 10"style="width: 400px;">
-            </div>
-        </div>   
-     </section>
-    <footer>
-        <p>Visitanos en www.restaurante-hcbb.com</p> 
-        <img src="imagenes/logo_facebook.png" alt="" width="50" height="50">
-        <img src="imagenes/logo_whatsapp.png" alt="" width="50" height="50">
-        <img src="imagenes/logo_instagram.jpg" alt="" width="50" height="50">
-      </footer>
+    <div class=marco_principal>
+        <nav class="barra_navegacion">
+            <img src="imagenes/Logo.svg" id="logo" alt="Logo" width="400px">
+            <ul class="navegacion">
+                <li><a target="_self" href="Principal.html"><h3>Inicio</h3></a>
+                    <ul class="submenu_inicio">
+                        <li><a href=""><h3>Quiénes somos</h3></a></li>
+                        <li><a href=""><h3>Nuestra comida</h3></a</li>
+                        <li><a href=""><h3>Dónde estamos</h3></a</li>
+                    </ul>
+                </li>
+                <li><a target=_self href="Menu.html"><h3>Menú</h3></a>
+                    <ul class="submenu">
+                        <li><a href="#menu_semanal"><h3>Menú semanal</h3></a</li>
+                        <li><a href="#platos_especiales"><h3>Platos especiales</h3></a</li>
+                    </ul>
+                </li>
+                <li><a target="_self" href="Contacto.html"><h3>Contáctanos</h3></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="contenido">
+            <section id="menu_semanal">
+                <h1>Menú semanal</h1><br>
+                <p>Escoge el día y plato que deseas reservar</p><br>
+                <button style="font-size: x-large; padding: 1%;"><strong>Lunes</strong></button>            
+                <button style="font-size: x-large; padding: 1%;"><strong>Martes</strong></button>
+                <button style="font-size: x-large; padding: 1%;"><strong>Miércoles</strong></button>
+                <button style="font-size: x-large; padding: 1%;"><strong>Jueves</strong></button>
+                <button style="font-size: x-large; padding: 1%;"><strong>Viernes</strong></button>
+                <button style="font-size: x-large; padding: 1%;"><strong>Sábado</strong></button>
+            </section>
+            <section id="platos_especiales">
+                <h2>Platos Especiales</h2>
+                <p>Esto son nuestros platos</p>
+                <div class="row">
+                    <div class="column">
+                        <p><b>Plato 1</b></p>
+                        <img src="imagenes/Plato1.jpg" alt="Plato 1" style="width: 400px;" >
+                    </div>
+                    <div class="column">
+                        <p><b>Plato 2</b></p>
+                        <img src="imagenes/Plato2.jpg" alt="Plato 2" style="width: 400px;">
+                    </div>
+                    <div class="column">
+                        <p><b>Plato 3</b></p>
+                        <img src="imagenes/Plato3.jpg" alt="Plato 3" style="width: 400px;">
+                    </div>
+                    <div class="column">
+                        <p><b>Plato 4</b></p>
+                        <img src="imagenes/Plato4.jpg" alt="Plato 4" style="width: 400px;">
+                    </div>
+                    <div class="column">
+                        <p><b>Plato 5</b></p>
+                        <img src="imagenes/Plato5.jpg" alt="Plato 5" style="width: 400px;">
+                    </div>
+                    <div class="column">
+                        <p><b>Plato 6</b></p>
+                        <img src="imagenes/Plato6.jpg" alt="Plato 6" style="width: 400px;">
+                    </div>
+                    <div class="column">
+                        <p><b>Plato 7</b></p>
+                        <img src="imagenes/Plato7.jpg" alt="Plato 7" style="width: 400px;">
+                    </div>
+                    <div class="column">
+                        <p><b>Plato 8</b></p>
+                        <img src="imagenes/Plato8.jpg" alt="Plato 8" style="width: 400px;">
+                    </div>
+                    <div class="column">
+                        <p><b>Plato 9</b></p>
+                        <img src="imagenes/Plato9.jpg" alt="Plato 9" style="width: 400px;">
+                    </div>
+                    <div class="column">
+                        <p><b>Plato 10</b></p>
+                        <img src="imagenes/Plato10.jpg" alt="Plato 10"style="width: 400px;">
+                    </div>
+                </div>   
+            </section>
+        </div>
+        <footer>
+            <p>Visitanos en www.restaurante-hcbb.com</p> 
+            <img src="imagenes/logo_facebook.png" alt="" width="50" height="50">
+            <img src="imagenes/logo_whatsapp.png" alt="" width="50" height="50">
+            <img src="imagenes/logo_instagram.png" alt="" width="50" height="50">
+            <a href="Administrador.html" id="ingresar"><strong>Ingreso empleados</strong></a>
+        </footer>
+    </div>
 </body>
 </html>
