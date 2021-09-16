@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>HCBB Restaurante</title>
     <link rel="icon" href="imagenes/logo_prueba.png">
-    <link rel="stylesheet" href="CSS/estilo_base.css">
+    <link rel="stylesheet" href="CSS/estilo_pruebas.css">
 </head>
 <body>
     <div class="marco_principal">
@@ -30,31 +30,7 @@
         </nav>
         <div class="contenido">
             <!--Aquí va el contenido de la página-->
-            <h1>¿Cuál es nuestro próximo menú?</h1>
-            <form id="modificacion_menu">
-                <label for="modif_menu">¿Qué deseas hacer hoy?</label><br>
-                <input type="radio" id="nuevo_menu" name="actualizacion_menu" value="Agregar">
-                <label for="nuevo_menu">Agregar un nuevo plato</label>
-                <input type="radio" id="cambiar_menu" name="actualizacion_menu" value="Actualizar">
-                <label for="cambiar_menu">Actualizar un plato</label><br><br>
-                <label for="seleccion_plato">Selecciona el plato que deseas actualizar</label><br>
-                <!--Lista de selección para cuando se desea modificar los atributos de un menú ya existente-->
-                <select name="seleccion_plato" id="lista_seleccion">
-                    <option>---------</option>
-                    <option>Plato 1</option>
-                    <option>Plato 2</option>
-                    <option>Plato 3</option>
-                    <option>Plato 4</option>
-                </select><br><br>
-                <label for="descripcion">Agrega la descripción del plato</label><br>
-                <textarea name="descripcion" id="descripcion" cols="40" rows="10"></textarea><br><br>
-                <label for="precio">¿Cuál será su precio de venta? $</label>
-                <input type="number" name="precio" id="precio" min="0" max="100000" step="1000" value="8000"><br><br>
-                <label for="img_plato">Agrega una imagen de cómo luce el plato</label><br>
-                <input type="file" name="img_plato" id="img_plato"><br><br>
-                <input type="submit" name="enviar" value="Guardar">
-                <input type="reset" value="Cancelar">
-            </form>
+            
         </div>
         <footer>
             <p>Visitanos en www.restaurante-hcbb.com</p> 
