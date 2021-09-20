@@ -5,6 +5,7 @@
     <title>HCBB Restaurante</title>
     <link rel="icon" href="imagenes/logo_prueba.png">
     <link rel="stylesheet" href="CSS/estilo_base.css">
+    <link rel="stylesheet" href="CSS/estilo_principal.css">
 </head>
 <body>
     <div class="marco_principal">
@@ -13,9 +14,9 @@
             <ul class="navegacion">
                 <li><a target="_self" href="Principal.html"><h3>Inicio</h3></a>
                     <ul class="submenu_inicio">
-                        <li><a href="Principal.html"><h3>Quiénes somos</h3></a></li>
-                        <li><a href="Principal.html"><h3>Nuestra comida</h3></a></li>
-                        <li><a href="Principal.html"><h3>Dónde estamos</h3></a></li>
+                        <li><a href="Principal.html#quienes_somos"><h3>Quiénes somos</h3></a></li>
+                        <li><a href="Pagina_construccion.html"><h3>Nuestra comida</h3></a></li>
+                        <li><a href="Pagina_construccion.html"><h3>Dónde estamos</h3></a></li>
                     </ul>
                 </li>
                 <li><a target=_self href="Menu.html"><h3>Menú</h3></a>
@@ -30,17 +31,30 @@
         </nav>
         <div class="contenido">
             <!--Aquí va el contenido de la página-->
-            <img src="imagenes/imagen_principal.jpg" class="imagen_principal" style="width: 100%;">
-            <p class="slogan" style="font-size: large;" ><strong><em>¡Delicioso sabor en la puerta de su casa, todos los días!</em></strong></p>
+            <br><p class="slogan"><strong><em>¡Delicioso sabor en la puerta de su casa, todos los días!</em></strong></p><br>
+            <img src="imagenes/imagen_principal.jpg" class="imagen_principal">
+            <div id="quienes_somos">
+                <h1> ¿Quiénes somos?</h1> <br>       
+                <p>Nuestro restaurante nace con el deseo de 4 personas de suplir alimento a las personas que trabajan y no tienen tiempo de prepararlo en casa, elaborando típicos almuerzos corrientes y especiales según el deseo del cliente. Trabajamos en el sector los Mártires vendiendo a personas cercanas y conocidas.</p>
+                <br>
+                <div class="nosotros">
+                    <img src="imagenes/1.jpg" alt= "Sorelis">
+                    <img src="imagenes/admon.jpg" alt= "Administrador">
+                    <img src="imagenes/2.jpg" alt="2">
+                </div>
+            </div>
         </div>
         <footer>
-            <p>Visitanos en www.restaurante-hcbb.com</p> 
-            <div class="redes_sociales">
-                <img src="imagenes/logo_facebook.png" width="50" height="50">
-                <img src="imagenes/logo_whatsapp.png" width="50" height="50">
-                <img src="imagenes/logo_instagram.png" width="50" height="50">
+            <div class="ingreso">
+                <p>Visitanos en www.restaurante-hcbb.com</p> 
+                <div class="redes_sociales">
+                    <img src="imagenes/logo_facebook.png" width="40">
+                    <img src="imagenes/logo_whatsapp.png" width="40">
+                    <img src="imagenes/logo_instagram.png" width="40">
+                </div>
+                <a href="Administrador.html" id="ingresar"><strong>Ingreso empleados</strong></a>
             </div>
-            <a href="Administrador.html" id="ingresar"><strong>Ingreso empleados</strong></a>
+            <div class="anuncio"><h3>Estamos trabajando para mejorar, disculpa las molestias.</h3></div>
         </footer>
 </body>
 </html>

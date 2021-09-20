@@ -1,0 +1,12 @@
+.preparando{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.preparando img{
+    width: 30%;
+    margin-bottom: 3%;
+}
+.preparando h1{
+    font-size: 5em;
+}

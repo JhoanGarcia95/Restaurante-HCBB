@@ -1,8 +1,4 @@
 
-.contenido{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    display: flexbox;    
-}
 #menu_semanal img{
     border-radius: 50%;
 }
@@ -14,7 +10,11 @@
     padding: 1%;
     margin: 0.5%;
     border-style: dotted;
-    
+    width: 100%;
+}
+.semana{
+    display: flex;
+    justify-content: space-around;
 }
 #menu_semanal > h1{
     font-size: 50px;
