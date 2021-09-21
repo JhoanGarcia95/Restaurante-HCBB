@@ -4,24 +4,11 @@
     height: 300px;
     border-radius: 50%;
 }
-#carta img{
-    width: 300px;
-    height: 300px;
-    border-radius: 20%;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    margin-right: 1%;
-    float: left;
-}
 #menu_semanal{
     padding: 1%;
     margin: 0.5%;
     border-style: dotted;
     width: 100%;
-}
-.semana{
-    display: flex;
-    justify-content: space-around;
 }
 #menu_semanal > h1{
     font-size: 50px;
@@ -29,20 +16,38 @@
 #menu_semanal > h3{
     font-size: 30px;
 }
+
 #carta{
-    margin-top: 3%;
+    margin-top: 10%;
     display:grid;
 }
 #carta > h2{
-    font-size: 50px;
+    font-size: 100px;
+    text-align: center;
 }
 #carta > h4{
-    font-size: 20px;
+    font-size: 40px;
+    text-align: center;
 }
-.column > p{
-    justify-content:center;
-    margin-left: 10%;
+#carta img{
+    width: 400px;
+    height: 300px;
+    border-radius: 20%;
+    margin: 1px;
+    float: left;
+    border-style: solid; 
+    border-width: 3px;
+    border-color: red; 
+}
+.column{
+    display:inline;
+    margin-bottom: 5%;
+}
+.column > p{   
+    text-align: justify;
+    margin: 10px;    
     padding: 1%;
     font-size: 25px;
-    display:flexbox;
+    display:flexbox;  
+    vertical-align:baseline; 
 }
