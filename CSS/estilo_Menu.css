@@ -18,22 +18,28 @@
 }
 
 #carta{
-    margin-top: 10%;
-    display:grid;
+    margin-top: 5%;
+}
+#carta .column{
+    display: inline-block;
+    white-space: nowrap;
 }
 #carta > h2{
     font-size: 100px;
     text-align: center;
+}
+#carta .column h2{
+    font-size: 50px;
 }
 #carta > h4{
     font-size: 40px;
     text-align: center;
 }
 #carta img{
-    width: 400px;
-    height: 300px;
+    width: 600px;
+    height:400px;
     border-radius: 20%;
-    margin: 1px;
+    margin-right: 1px;
     float: left;
     border-style: solid; 
     border-width: 3px;
@@ -43,11 +49,59 @@
     display:inline;
     margin-bottom: 5%;
 }
-.column > p{   
+#carta .column >img{
+    margin-right: 1px;
+}
+
+#carta .column > p{   
+    width: 1500px;
     text-align: justify;
     margin: 10px;    
-    padding: 1%;
+    padding-left: 220px;
     font-size: 25px;
+    font-family:Arial, Helvetica, sans-serif;
     display:flexbox;  
     vertical-align:baseline; 
 }
+
+.column {
+    position: relative;
+    width: 50%;
+  }
+  
+  .imagen {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 600px;
+    height:auto;
+    border-radius: 20%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+  
+  .column:hover .overlay {
+    opacity: 1;
+  }
+  
+  .texto {
+      margin: auto;
+    color: white;
+    font-size: 20px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align:center;
+  }
