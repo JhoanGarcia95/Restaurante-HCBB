@@ -7,14 +7,36 @@
 #menu_semanal{
     padding: 1%;
     margin: 0.5%;
-    border-style: dotted;
     width: 100%;
+    border-style: solid; 
+    border-width: 3px;
+    border-color:indianred; 
 }
 #menu_semanal > h1{
     font-size: 50px;
 }
 #menu_semanal > h3{
     font-size: 30px;
+}
+#Lunes:hover{
+    transform: scale(150%);
+    transition: .5s ease;
+}
+#Martes:hover{
+    transform: scale(150%);
+    transition: .5s ease;
+}
+#Miercoles:hover{
+    transform: scale(150%);
+    transition: .5s ease;
+}
+#Jueves:hover{
+    transform: scale(150%);
+    transition: .5s ease;
+}
+#Viernes:hover{
+    transform: scale(150%);
+    transition: .5s ease;
 }
 
 #carta{
@@ -90,11 +112,11 @@
   }
   
   .column:hover .overlay {
-    opacity: 1;
+    opacity: 1;    
   }
   
   .texto {
-      margin: auto;
+    margin: auto;
     color: white;
     font-size: 20px;
     position:absolute;
