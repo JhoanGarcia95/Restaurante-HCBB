@@ -1,7 +1,22 @@
-
+.marco_principal{
+    width: 90%;
+    max-width: 2000px;
+    margin:auto;
+    text-align: center;
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: space-around;
+}
+.marco_principal nav, .contenido{
+    width: 100%;
+}
+.contenido{
+    display: flex;
+    box-sizing: border-box;
+}
 #menu_semanal img{
-    width: 300px;
-    height: 300px;
+    width: 300px;;
+    height: 300px;;
     border-radius: 50%;
 }
 #menu_semanal{
@@ -38,13 +53,27 @@
     transform: scale(150%);
     transition: .5s ease;
 }
+.imagen_plato{
+    width: 70%;
 
+}
 #carta{
-    margin-top: 5%;
+    margin: 1px;
+    width: 100%;
+    background-color:burlywood;    
+}
+#carta ul{
+    list-style: none;
+    display: flex;
+}
+ul li{
+    margin: 0.5%;
+    justify-content: space-around;
 }
 #carta .column{
-    display: inline-block;
-    white-space: nowrap;
+    display:grid;
+    white-space: wrap; 
+    grid-template-columns: 1fr 2fr;   
 }
 #carta > h2{
     font-size: 100px;
@@ -57,7 +86,7 @@
     font-size: 40px;
     text-align: center;
 }
-#carta img{
+.imagen_plato img{
     width: 600px;
     height:400px;
     border-radius: 20%;
@@ -67,6 +96,7 @@
     border-width: 3px;
     border-color: red; 
 }
+
 .column{
     display:inline;
     margin-bottom: 5%;
@@ -89,41 +119,42 @@
 .column {
     position: relative;
     width: 50%;
-  }
+}
   
-  .imagen {
+.imagen {
     display: block;
     width: 100%;
     height: auto;
-  }
+}
   
-  .overlay {
+.overlay {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    right: 0;
+    right:0;
     width: 600px;
     height:auto;
     border-radius: 20%;
     opacity: 0;
     transition: .5s ease;
     background-color: #008CBA;
-  }
+}
   
-  .column:hover .overlay {
+.column:hover .overlay {
     opacity: 1;    
-  }
+}
   
-  .texto {
-    margin: auto;
+.texto {
+    margin: 1px 1px 1px 1px;
+    padding: 1%;
     color: white;
-    font-size: 20px;
-    position:absolute;
+    font-size: 2vh;
+    position:inherit;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align:center;
-  }
+}
