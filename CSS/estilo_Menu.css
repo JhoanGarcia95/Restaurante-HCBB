@@ -19,6 +19,9 @@
     height: 300px;;
     border-radius: 50%;
 }
+.semana ul li{
+    list-style: none;
+}
 #menu_semanal{
     padding: 1%;
     margin: 0.5%;
@@ -26,6 +29,7 @@
     border-style: solid; 
     border-width: 3px;
     border-color:indianred; 
+    border-radius: 5%;
 }
 #menu_semanal > h1{
     font-size: 50px;
@@ -55,25 +59,27 @@
 }
 .imagen_plato{
     width: 70%;
-
 }
 #carta{
     margin: 1px;
     width: 100%;
-    background-color:burlywood;    
+    background-color:rgb(241, 224, 201);    
 }
 #carta ul{
     list-style: none;
-    display: flex;
+    flex:content;
 }
 ul li{
-    margin: 0.5%;
-    justify-content: space-around;
+    margin: 1%;
+    justify-content: space-around;    
+    position: relative;
 }
 #carta .column{
-    display:grid;
-    white-space: wrap; 
+    display: flex;
+    flex-flow: row wrap; 
+    flex-direction: row;
     grid-template-columns: 1fr 2fr;   
+    align-self: center;    
 }
 #carta > h2{
     font-size: 100px;
@@ -81,53 +87,51 @@ ul li{
 }
 #carta .column h2{
     font-size: 50px;
+    
 }
 #carta > h4{
     font-size: 40px;
     text-align: center;
+    margin-bottom: 3%;
 }
 .imagen_plato img{
     width: 600px;
     height:400px;
     border-radius: 20%;
-    margin-right: 1px;
     float: left;
     border-style: solid; 
     border-width: 3px;
-    border-color: red; 
+    border-color:black; 
 }
 
 .column{
-    display:inline;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
+    position: relative;
+    width: 50%;
+    float: left;
+    justify-content: center;
 }
 #carta .column >img{
     margin-right: 1px;
 }
-
 #carta .column > p{   
     width: 1500px;
     text-align: justify;
     margin: 10px;    
-    padding-left: 220px;
+    padding-left: 20px;
     font-size: 25px;
     font-family:Arial, Helvetica, sans-serif;
     display:flexbox;  
     vertical-align:baseline; 
 }
-
-.column {
-    position: relative;
-    width: 50%;
-}
-  
 .imagen {
     display: block;
     width: 100%;
     height: auto;
 }
-  
+
 .overlay {
+    margin-left: 15%;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -138,7 +142,7 @@ ul li{
     border-radius: 20%;
     opacity: 0;
     transition: .5s ease;
-    background-color: #008CBA;
+    background-color:khaki;
 }
   
 .column:hover .overlay {
@@ -146,11 +150,13 @@ ul li{
 }
   
 .texto {
-    margin: 1px 1px 1px 1px;
+    width: 90%;
+    margin: 1px 1px;    
+    border-radius: 10%;
     padding: 1%;
-    color: white;
+    color:brown;
     font-size: 2vh;
-    position:inherit;
+    position:absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
