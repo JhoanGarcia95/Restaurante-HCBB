@@ -57,6 +57,8 @@
     transform: scale(150%);
     transition: .5s ease;
 }
+
+
 .imagen_plato{
     width: 70%;
 }
@@ -129,6 +131,7 @@ ul li{
     width: 100%;
     height: auto;
 }
+
 
 .overlay {
     margin-left: 15%;
