@@ -19,9 +19,9 @@ input, textarea, select{
 }
 .botones{
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
 }
-#save, #cancel{
+#atras, #siguiente{
     position: relative;
     width: 30%;
     font-size: 16px;
@@ -31,7 +31,7 @@ input, textarea, select{
 #img_plato{
     border: none;
 }
-#save:hover, #cancel:hover{
+#atras:hover, #siguiente:hover{
     color:#f54a06;
 }
 .contenido h1{
@@ -39,10 +39,28 @@ input, textarea, select{
     text-align:left; 
     padding-bottom: 20px; 
     color: black;
-  }
+}
   
-  .contenido h3{
+.contenido h3{
     font-size: 16px; 
     padding-bottom: 30px;
     color: black;   
-  }
+}
+/*Esconder todas las páginas del formulario por defecto*/
+.pag{
+    display: none;
+}
+/*Círculos para las páginas del formulario*/
+.step{
+    width: 15px;
+    height: auto;
+    margin: 0 2px;
+    background-color: grey;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+.step.active{
+    opacity: 1;
+}

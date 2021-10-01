@@ -6,6 +6,7 @@
     <link rel="icon" href="imagenes/logo_prueba.png">
     <link rel="stylesheet" href="CSS/estilo_base.css">
     <link rel="stylesheet" href="CSS/estilo_admin.css">
+    <script src="JS/admin.js"></script>
 </head>
 <body>
     <div class="marco_principal">
@@ -34,29 +35,45 @@
             <div class="formulario">
                 <h1>¿Cuál es nuestro próximo menú?</h1>
                 <form id="modificacion_menu">
-                    <label for="modif_menu"><h3>¿Qué deseas hacer hoy?</h3></label><br>
-                    <input type="radio" id="nuevo_menu" name="actualizacion_menu" value="Agregar">
-                    <label for="nuevo_menu">Agregar un nuevo plato</label>
-                    <input type="radio" id="cambiar_menu" name="actualizacion_menu" value="Actualizar">
-                    <label for="cambiar_menu">Actualizar un plato</label><br><br>
-                    <label for="seleccion_plato">Selecciona el plato que deseas actualizar</label><br>
-                    <!--Lista de selección para cuando se desea modificar los atributos de un menú ya existente-->
-                    <select name="seleccion_plato" id="lista_seleccion">
-                        <option>---------</option>
-                        <option>Plato 1</option>
-                        <option>Plato 2</option>
-                        <option>Plato 3</option>
-                        <option>Plato 4</option>
-                    </select><br><br>
-                    <label for="descripcion">Agrega la descripción del plato</label><br>
-                    <textarea name="descripcion" id="descripcion" cols="40" rows="10"></textarea><br><br>
-                    <label for="precio">¿Cuál será su precio de venta? $</label>
-                    <input type="number" name="precio" id="precio" min="0" max="100000" step="1000" value="8000"><br><br>
-                    <label for="img_plato">Agrega una imagen de cómo luce el plato</label><br><br>
-                    <input type="file" name="img_plato" id="img_plato"><br><br>
+                    <div class="pag">
+                        <p><input type="text" placeholder="Usuario" oninput="this.className=''"></p>
+                        <input type="text" placeholder="Contraseña" oninput="this.className=''">
+                    </div>
+                    <div class="pag">
+                        <label for="modif_menu"><h3>¿Qué deseas hacer hoy?</h3></label>
+                        <input type="radio" id="nuevo_menu" name="actualizacion_menu" value="Agregar">
+                        <label for="nuevo_menu">Agregar un nuevo plato</label>
+                        <input type="radio" id="cambiar_menu" name="actualizacion_menu" value="Actualizar">
+                        <label for="cambiar_menu">Actualizar un plato</label><br><br>
+                    </div>
+                    <div class="pag">
+                        <div id="seleccion">
+                            <label for="seleccion_plato">Selecciona el plato que deseas actualizar</label><br>
+                            <!--Lista de selección para cuando se desea modificar los atributos de un menú ya existente-->
+                            <select name="seleccion_plato" id="lista_seleccion" class="input">
+                                <option>---------</option>
+                                <option>Plato 1</option>
+                                <option>Plato 2</option>
+                                <option>Plato 3</option>
+                                <option>Plato 4</option>
+                            </select><br><br>
+                        </div>
+                        <label for="descripcion">Agrega la descripción del plato</label><br>
+                        <textarea name="descripcion" id="descripcion" class="input" cols="40" rows="10"></textarea><br><br>
+                        <label for="precio">¿Cuál será su precio de venta? $</label>
+                        <input type="number" name="precio" id="precio" class="input" min="0" max="100000" step="1000" value="8000"><br><br>
+                        <label for="img_plato">Agrega una imagen de cómo luce el plato</label><br><br>
+                        <input type="file" name="img_plato" id="img_plato" class="input"><br><br>
+                    </div>  
                     <div class="botones">
-                        <input type="submit" name="enviar" value="Guardar" id="save">
-                        <input type="reset" value="Cancelar" id="cancel">
+                        <button type="button" id="atras" onclick="mostrarPag(-1)">Atrás</button>
+                        <button type="button" id="siguiente" onclick="mostrarPag(1)">Continuar</button>
+                    </div>
+                    <!--Indicativos páginas del formulario-->
+                    <div style="text-align: center; margin-top: 40px;">
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
                     </div>
                 </form>
             </div>
