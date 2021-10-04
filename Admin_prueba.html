@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>HCBB Restaurante</title>
+    <link rel="icon" href="imagenes/logo_prueba.png">
+    <link rel="stylesheet" href="CSS/estilo_pruebas.css">
+    <link rel="stylesheet" href="CSS/estilo_adminPrueba.css">
+    <script src="JS/adminPrueba.js"></script>
+</head>
+<body onload="stepCreation(),mostrar(0)">
+    <div class="marco_principal">
+        <nav class="barra_navegacion">
+            <img src="imagenes/logo.png" id="logo" alt="Logo">
+            <ul class="navegacion">
+                <li><a target="_self" href="Principal.html"><h3>Inicio</h3></a>
+                    <ul class="submenu_inicio">
+                        <li><a href="Principal.html#quienes_somos"><h3>Quiénes somos</h3></a></li>
+                        <li><a href="Pagina_construccion.html"><h3>Nuestra comida</h3></a></li>
+                        <li><a href="Pagina_construccion.html"><h3>Dónde estamos</h3></a></li>
+                    </ul>
+                </li>
+                <li><a target=_self href="Menu.html"><h3>Menú</h3></a>
+                    <ul class="submenu">
+                        <li><a href="Menu.html#menu_semanal"><h3>Menú semanal</h3></a></li>
+                        <li><a href="Menu.html#carta"><h3>Nuestra carta</h3></a></li>
+                    </ul>
+                </li>
+                <li><a target="_self" href="Contacto.html"><h3>Contáctanos</h3></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="contenido">
+            <!--Aquí va el contenido de la página-->
+            <div class="formulario">
+                <h1>¿Cuál es nuestro próximo menú?</h1>
+                <form action="" id="modificacion_menu">
+                    <div class="tag">
+                        <!--Pestaña de ingreso-->
+                        <h3>Ingreso de empleados</h3>
+                        <p><input type="text" placeholder="Usuario" oninput="this.className=''" autofocus></p>
+                        <p><input type="text" placeholder="Contraseña" oninput="this.className=''"></p>
+                    </div>
+                    <div class="tag">
+                        <h3>¿Qué deseas hacer hoy?</h3>
+                        <div id="radio_button">
+                            <div>
+                                <input type="radio" id="nuevo_menu" name="actualizacion_menu" value="Agregar">
+                                <label for="nuevo_menu">Agregar un nuevo plato</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="cambiar_menu" name="actualizacion_menu" value="Actualizar">
+                                <label for="cambiar_menu">Actualizar un plato</label>
+                            </div>
+                        </div>
+                        <p id="mens_error">Debe seleccionar alguna de las opciones</p>
+                    </div>
+                    <div class="tag" id="cambios">
+                        <div id="seleccion">
+                            <br><label for="seleccion_plato">Selecciona el plato que deseas actualizar</label><br>
+                            <!--Lista de selección para cuando se desea modificar los atributos de un menú ya existente-->
+                            <select name="seleccion_plato" id="lista_seleccion" class="input">
+                                <option>---------</option>
+                                <option>Plato 1</option>
+                                <option>Plato 2</option>
+                                <option>Plato 3</option>
+                                <option>Plato 4</option>
+                            </select><br>
+                        </div>
+                        <br><label for="descripcion">Agrega la descripción del plato</label><br>
+                        <textarea name="descripcion" id="descripcion" class="input" cols="40" rows="5"></textarea><br>
+                        <br><label for="precio">¿Cuál será su precio de venta? $</label>
+                        <input type="number" name="precio" id="precio" class="input" min="0" max="100000" step="1000" value="8000"><br>
+                        <br><label for="img_plato">Agrega una imagen de cómo luce el plato</label><br>
+                        <input type="file" name="img_plato" id="img_plato" class="input"><br>
+                    </div>
+                    <div class="button">
+                        <button type="button" id="vistaPrev" onclick="">Vista Previa</button>
+                        <button type="button" id="btnAnt" onclick="btnPrev(-1)">Atrás</button>
+                        <button type="button" id="btnSig" onclick="btnPrev(1)">Continuar</button>
+                    </div>
+                    <div id="indicador">
+                        <!--Elementos creados automáticamente desde JS-->
+                    </div>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <div class="ingreso">
+                <p>Visitanos en www.restaurante-hcbb.com</p> 
+                <div class="redes_sociales">
+                    <img src="imagenes/logo_facebook.png">
+                    <img src="imagenes/logo_whatsapp.png">
+                    <img src="imagenes/logo_instagram.png">
+                </div>
+                <a href="Administrador.html" id="ingresar"><strong>Ingreso empleados</strong></a>
+            </div>
+            <div class="anuncio"><h3>Estamos trabajando para mejorar, disculpa las molestias.</h3></div>
+        </footer>
+    </div>
+</body>
+</html>
