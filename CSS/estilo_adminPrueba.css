@@ -1,4 +1,4 @@
-/*Pendiente validación usuario/contraseña y validación llenado de campos última página*/
+/*Pendiente vista previa del plato*/
 .formulario{
     display: flex;
     flex-direction: column;
@@ -36,7 +36,7 @@ input, textarea, select{
     font-size: 20px;
     width: 100%;
 }
-input.invalido{
+.invalido{
     background-color: #ffdddd;
 }
 #img_plato{
@@ -68,6 +68,11 @@ input.invalido{
     display: none;
     font-size: 12px;
 }
+#usuario_incorrecto{
+    color: red;
+    display: none;
+    font-size: 12px;
+}
 .button {
     align-self: flex-end;
     margin-top: 4%;
@@ -92,4 +97,7 @@ button{
     height: 10px;
     margin-right: 1%;
     background-color: black;
+}
+#exito{
+    display: none;
 }

@@ -30,6 +30,8 @@ function mostrar(n){
 function validacion(){
     var y, i, valido=true;
     y=x[currentTab].getElementsByTagName("input");
+    document.getElementById("mens_error").style.display="none";
+    document.getElementById("usuario_incorrecto").style.display="none";
     for (i=0; i<y.length;i++){
         if (y[i].value==""){
             y[i].className+=" invalido";
@@ -37,7 +39,17 @@ function validacion(){
         }
     }
     switch(currentTab){
+        case 0:
+            valido=true;
+            for (i=0; i<y.length;i++){
+                if (y[i].value!=user[i]){
+                    valido=false;
+                }
+            } 
+            if(!valido){document.getElementById("usuario_incorrecto").style.display="block"}
+            break
         case 1:
+            //Botones de selección tipo radio
             const radio=document.getElementsByName("actualizacion_menu");
             valido=false;
             for (i=0;i<radio.length;i++){
@@ -46,7 +58,16 @@ function validacion(){
                 }
             }
             if(!valido){document.getElementById("mens_error").style.display="block"}
-    }
+            break
+        case 2:
+            //Datos del plato - Validación para selección de plato y caja de texto tipo textarea
+            var sel=document.getElementById("lista_seleccion").selectedIndex;
+            if(sel==0 || document.getElementById("descripcion").value==""){
+                valido=false;
+            }
+            if(!valido){document.getElementById("mens_error").style.display="block"}
+            break
+        }
     return valido;
 }
 
@@ -58,12 +79,8 @@ function btnPrev(n){
     if (currentTab>=x.length){
         //Función a ejecutar cuando se oprime el botón de siguiente en la última pestaña
         //Función provisional mientras base de datos ON
-        const mens=document.createElement("P");
-        const text=document.createTextNode("Datos del plato guardados con éxito");
-        mens.appendChild(text);
+        document.getElementById("exito").style.display="inline";
         const prev=document.getElementsByClassName("button")[0];
-        const parent=document.getElementById("modificacion_menu");
-        parent.insertBefore(mens,prev);
         prev.style.display="none"; //Oculta los botones al final
         indicStep(currentTab);
         return false;

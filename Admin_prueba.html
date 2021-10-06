@@ -38,7 +38,7 @@
                     <div class="tag">
                         <!--Pestaña de ingreso-->
                         <h3>Ingreso de empleados</h3>
-                        <p><input type="text" placeholder="Usuario" oninput="this.className=''" autofocus></p>
+                        <p><input type="text" placeholder="Usuario" oninput="this.className=''"></p>
                         <p><input type="text" placeholder="Contraseña" oninput="this.className=''"></p>
                     </div>
                     <div class="tag">
@@ -53,31 +53,43 @@
                                 <label for="cambiar_menu">Actualizar un plato</label>
                             </div>
                         </div>
-                        <p id="mens_error">Debe seleccionar alguna de las opciones</p>
                     </div>
                     <div class="tag" id="cambios">
                         <div id="seleccion">
                             <br><label for="seleccion_plato">Selecciona el plato que deseas actualizar</label><br>
                             <!--Lista de selección para cuando se desea modificar los atributos de un menú ya existente-->
                             <select name="seleccion_plato" id="lista_seleccion" class="input">
-                                <option>---------</option>
-                                <option>Plato 1</option>
-                                <option>Plato 2</option>
-                                <option>Plato 3</option>
-                                <option>Plato 4</option>
+                                <option value="--">---------</option>
+                                <option value="arroz-Atollado">Arroz Atollado</option>
+                                <option value="arroz-Camarones">Arroz con camarones</option>
+                                <option value="arroz-Carnes">Arroz con carnes</option>
+                                <option value="arroz-Paisa">Arroz paisa</option>
+                                <option value="arroz-Pollo">Arroz con pollo</option>
+                                <option value="Bagre-salsa">Bagre en salsa</option>
+                                <option value="Chuleta-valluna">Chuleta valluna</option>
+                                <option value="Corrientazo-tipico">Corrientazo típico</option>
+                                <option value="Poteca-ahuyama">Poteca de ahuyama</option>
+                                <option value="Sancocho-trifasico">Sancocho trifásico</option>
+                                <option value="Sobrebarriga">Sobrebarriga</option>
+                                <option value="Sopa-arroz">Sopa de arroz</option>
                             </select><br>
                         </div>
                         <br><label for="descripcion">Agrega la descripción del plato</label><br>
-                        <textarea name="descripcion" id="descripcion" class="input" cols="40" rows="5"></textarea><br>
+                        <textarea name="descripcion" id="descripcion" oninput="this.className=''" cols="40" rows="5"></textarea><br>
                         <br><label for="precio">¿Cuál será su precio de venta? $</label>
                         <input type="number" name="precio" id="precio" class="input" min="0" max="100000" step="1000" value="8000"><br>
                         <br><label for="img_plato">Agrega una imagen de cómo luce el plato</label><br>
-                        <input type="file" name="img_plato" id="img_plato" class="input"><br>
+                        <input type="file" name="img_plato" id="img_plato" oninput="this.className=''"><br>
                     </div>
+                    <p id="mens_error">Faltan campos por completar.</p>
+                    <p id="usuario_incorrecto">Usuario y/o contraseña incorrectos</p>
                     <div class="button">
                         <button type="button" id="vistaPrev" onclick="">Vista Previa</button>
                         <button type="button" id="btnAnt" onclick="btnPrev(-1)">Atrás</button>
                         <button type="button" id="btnSig" onclick="btnPrev(1)">Continuar</button>
+                    </div>
+                    <div id="exito">
+                        <h3>Datos del plato guardados con éxito.</h3>
                     </div>
                     <div id="indicador">
                         <!--Elementos creados automáticamente desde JS-->
