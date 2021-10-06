@@ -21,3 +21,32 @@
     width: 25%;
     border-radius: 50%;
 }
+/*angie-nuestra comida*/
+.img_verduras img{
+    position: relative;
+    justify-content: space-around;
+    margin: 1%;
+    border-radius: 1pc 1pc 1pc 1pc;
+    margin-right: auto;
+    border-color: black;
+    border-width: 5px;
+}
+.p1{
+    font-size: 1.5em;
+}
+aside{
+    text-align: center;
+    background-color: rgb(249, 168, 37);
+    font-size: 2em;
+}
+/*angie-nuestra comida*/
+.donde_estamos h2{
+    font-size: xx-large;
+    text-align: center;
+}
+.cont_principal{
+   display: inline-flex;
+}
+.p2{
+    opacity: 50% ;
+}
