@@ -1,0 +1,12 @@
+.enviando{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.enviando img{
+    width: 80%;
+    margin-bottom: 3%;
+}
+.enviando h1{
+    font-size: 3em;
+}

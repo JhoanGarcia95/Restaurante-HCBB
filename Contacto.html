@@ -6,6 +6,7 @@
     <link rel="icon" href="imagenes/logo_prueba.png">
     <link rel="stylesheet" href="CSS/estilo_base.css">
     <link rel="stylesheet" href="CSS/estilo_contactos.css">
+    <script src="JS/validar_contacto.js"></script>
 </head>
 <body>
     <div class="marco_principal">
@@ -35,17 +36,28 @@
                 <h1>Formulario de contacto</h1>
                 <h3>Escríbenos y en breve nos pondremos en contacto contigo</h3>
                 
-                <form>
-                <label for="nombre">Nombres:</label><br>
-                <input type="text" id="nombre" name="nombre" value=""><br>
-                <label for="apellido">Apelllido:</label><br>
-                <input type="text" id="apellido" name="apellido" value=""><br>
-                <label for="telefono">Teléfono:</label><br>
-                <input type="text" id="telefono" name="telefono" value=""><br>
-                <label for="mensaje">Mensaje:</label><br>
-                <textarea name="mensaje" rows="10" cols="30"></textarea><br><br>
-                <a href="Pagina_construccion.html"><input type="button" value="Enviar" id="enviar"></a>
+                <form class="forContacto" id="regForm" onsubmit="return validarContacto()" method="post">
+                    <form>               
+                        <label for="nombre">Nombres:</label><br>
+                        <input type="text" id="nombre" name="nombre" value=""><br>
+                        <label for="apellido">Apelllido:</label><br>
+                        <input type="text" id="apellido" name="apellido" value=""><br>
+                        <label for="telefono">Teléfono:</label><br>
+                        <input type="text" id="telefono" name="telefono" value=""><br>
+                        <label for="correo">Correo:</label><br>
+                        <input type="email" id="correo" name="correo" value=""><br>
+                        <label for="mensaje">Mensaje:</label><br>
+                        <textarea type="text" id="mensaje" name="mensaje" rows="10" cols="30" value=""></textarea><br>
+                        <input type="button" id="enviar" onclick="pagEnvio()" value="Enviar">             
+                    </form>
                 </form>
+            </div>
+            <div class="politicas_privacidad">
+                <h3>POLÍTICA DE PROTECCIÓN DE DATOS</h3>
+                <p> De acuerdo con la Ley Estatutaria 1581 de 2012 de Protección de Datos y sus normas reglamentarias, se informa al usuario que los datos consignados en el presente formulario serán incorporados en una base de datos responsabilidad de RESTAURANTE HCBB, con la finalidad de cumplir el objeto social de la sociedad.
+    
+                    Usted puede ejercer los derechos de acceso, corrección, supresión, revocación o reclamo por infracción sobre los datos, mediante escrito dirigido a RESTAURANTE HCBB, a la dirección de correo electrónico protecciondatos@hcbb.com, indicando en el asunto el derecho que desea ejercer.<br>
+                    El usuario declara haber leído la cláusula anterior y estar conforme con la misma, siendo su aceptación el envío de sus datos.</p>
             </div>
         </div>
         <footer>

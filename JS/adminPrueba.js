@@ -25,13 +25,16 @@ function mostrar(n){
     }
     indicStep(n);
 }
-
+//Esconder mensaje error usuario
+function refresh(){
+    document.getElementById("usuario_incorrecto").style.visibility="hidden";
+}
 //Validación ingreso de datos en cajas de texto y usuario y contraseña
 function validacion(){
     var y, i, valido=true;
     y=x[currentTab].getElementsByTagName("input");
     document.getElementById("mens_error").style.display="none";
-    document.getElementById("usuario_incorrecto").style.display="none";
+    document.getElementById("usuario_incorrecto").style.visibility="hidden";
     for (i=0; i<y.length;i++){
         if (y[i].value==""){
             y[i].className+=" invalido";
@@ -46,7 +49,11 @@ function validacion(){
                     valido=false;
                 }
             } 
-            if(!valido){document.getElementById("usuario_incorrecto").style.display="block"}
+            if(!valido){
+                document.getElementById("usuario_incorrecto").style.visibility="visible";
+                document.getElementById("usuario").value="";
+                document.getElementById("password").value="";
+            }
             break
         case 1:
             //Botones de selección tipo radio

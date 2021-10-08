@@ -18,13 +18,13 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 95%;
+    height: 90%;
     width: 50%;
     font-size: 1.2em;
 }
 .formulario>h1{
     min-height: 5%;
-    font-size: 3em;
+
 }
 .tag h3{
     margin-bottom: 6%;
@@ -70,7 +70,7 @@ input, textarea, select{
 }
 #usuario_incorrecto{
     color: red;
-    display: none;
+    visibility:hidden;
     font-size: 12px;
 }
 .button {
@@ -100,4 +100,10 @@ button{
 }
 #exito{
     display: none;
+    text-align: center;
+}
+#imgFormAdmin{
+    width: 80%;
+    height: auto;
+    align-self: center;
 }
