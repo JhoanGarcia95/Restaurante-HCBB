@@ -19,17 +19,19 @@
     height: 300px;;
     border-radius: 50%;
 }
-.semana ul li{
-    list-style: none;
+.semana {
+    display:flex;   
+    justify-content: space-around;
+    margin: 0%;
 }
+
 #menu_semanal{
     padding: 1%;
     margin: 0.5%;
     width: 100%;
     border-style: solid; 
     border-width: 3px;
-    border-color:indianred; 
-    border-radius: 5%;
+    border-color:rgb(226, 27, 27);     
 }
 #menu_semanal > h1{
     font-size: 50px;
