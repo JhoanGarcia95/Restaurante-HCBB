@@ -30,7 +30,7 @@
         </nav>
         <div class="contenido">
             <header style="margin-top: 5%;">
-                <h1>Para el día de hoy tenemos:</h1>
+                <h1>Para el <strong><em>Martes</em></strong> tenemos:</h1>
             </header>
             <section>
                 <div class="platos" style="display:flex; justify-content: space-around; text-align: center;">
@@ -54,19 +54,22 @@
                         <input type="date" id="fecha" name="fecha" value="" style="margin-left: 15px;"><br>
 
                         <label for="nombre"  style="margin: 5px;"><strong>Cliente:</strong></label>
-                        <input type="text" id="nombre" name="nombre" value="" style="margin-left: 5px; width: 600px;"><br>
+                        <input type="text" id="nombre" name="nombre" value="" style="margin-left: 5px; width: 400px;">
+
+                        <label for="cedula"  style="margin: 5px;"><strong>Cédula:</strong></label>
+                        <input type="text" id="cedula" name="cedula" value="" style="margin-left: 5px; width: 150px;"><br>
                         
                         <label for="plato" style="margin: 5px;"><strong>Plato:</strong></label>
-                        <input type="text" id="plato" name="plato" value="" style="margin-left: 19px;">
+                        <input type="text" id="plato" name="plato" value="" style="margin-left: 19px; width: 400px;">
 
                         <label for="precio"  style="margin: 5px;"><strong>Precio Unitario:</strong></label>
-                        <input type="text" id="precio" name="precio" value="" style="margin-left: 15px;"><br>
+                        <input type="text" id="precio" name="precio" value="" style="margin-left: 15px; width: 80px;"><br>
 
                         <label for="cantidad"  style="margin: 5px;"><strong>Cantidad:</strong></label>
                         <input type="number" id="cantidad" name="cantidad" value="" style="margin-left: 43px;"><br>
 
                         <label for="total"  style="margin: 5px;"><strong>Total a Pagar:</strong></label>
-                        <input type="number" id="total" name="total" value="" style="margin-left: 15px;"><br>
+                        <input type="text" id="total" name="total" value="" style="margin-left: 15px;"><br>
 
                         <input type="button" id="enviar" onclick="pagEnvio()" value="Reservar"  style="margin: 5px; width: 100px; height: 30px; font-size: 20px;">             
                     </form>
