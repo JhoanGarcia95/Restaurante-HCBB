@@ -24,7 +24,7 @@
 /*angie-nuestra comida*/
 .img_verduras img{
     position: relative;
-    justify-content: space-around;
+    justify-content: center;
     margin: 1%;
     border-radius: 1pc 1pc 1pc 1pc;
     margin-right: auto;
