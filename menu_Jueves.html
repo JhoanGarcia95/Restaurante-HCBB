@@ -5,6 +5,7 @@
     <title>HCBB Restaurante</title>
     <link rel="icon" href="imagenes/logo_prueba.png">
     <link rel="stylesheet" href="CSS/estilo_pruebas.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
     <div class="marco_principal">
@@ -30,21 +31,27 @@
         </nav>
         <div class="contenido">
             <header style="margin-top: 5%;">
-                <h1>Para el <strong><em>Jueves</em></strong> tenemos:</h1>
+                <h1 id="fecha_Jueves">Para el <strong><em>Jueves </em></strong>{{message}},  tenemos:</h1>
             </header>
             <section>
                 <div class="platos" style="display:flex; justify-content: space-around; text-align: center;">
                     <div class="imagen_plato" style="margin: 2px;">
                         <img src="imagenes/sancocho-Trifasico.jpg" class="d-block w-100" alt="..." style="width: 400px; height: 300px;">
-                        <h2><b>Sancocho Trifásico</b></h2>
+                        <div id="plato_10">
+                            <button v-on:click="elegirPlato"><h2><b>{{ message }}</b></h2></button>
+                          </div>
                     </div>
                     <div class="imagen_plato" style="margin: 2px;">
                         <img src="imagenes/sobrebarriga-Horno.jpg" class="d-block w-100" alt="..." style="width: 400px; height: 300px;">
-                        <h2><b>Sobrebarriga al Horno</b></h2>
+                        <div id="plato_11">
+                            <button v-on:click="elegirPlato"><h2><b>{{ message }}</b></h2></button>
+                          </div>
                     </div>
                     <div class="imagen_plato" style="margin: 2px;">
                         <img src="imagenes/sopa-Arroz.jpg" class="d-block w-100" alt="..." style="width: 400px; height: 300px;">
-                        <h2><b>Sopa de Arroz</b></h2>
+                        <div id="plato_12">
+                            <button v-on:click="elegirPlato"><h2><b>{{ message }}</b></h2></button>
+                          </div>
                     </div>
                 </div>
                     <div id="formularioPedidos" style="margin-top: 25px;">
@@ -75,6 +82,7 @@
             </section>
             
         </div>
+        <script src="JS/menu_semanal.js"></script>
         <footer>
             <div class="ingreso">
                 <p>Visitanos en www.restaurante-hcbb.com</p> 
