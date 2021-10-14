@@ -37,8 +37,11 @@
                 <div class="platos" style="display:flex; justify-content: space-around; text-align: center;">
                     <div class="imagen_plato" style="margin: 2px;">
                         <img src="imagenes/arroz-Atollado.jpg" class="d-block w-100" alt="..." style="width: 400px; height: 300px;">
+                        
+    
                         <div id="plato_1">
-                            <button v-on:click="elegirPlato"><h2><b>{{ message }}</b></h2></button>                                                                                  
+                            <img :src="img_Plato_1" >
+                            <button v-on:click="elegirPlato()"><h2><b>{{ message }}</b></h2></button>                                                                                  
                           </div>
                         
                     </div>
