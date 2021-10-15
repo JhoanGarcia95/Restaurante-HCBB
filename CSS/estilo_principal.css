@@ -50,3 +50,8 @@ aside{
 .p2{
     opacity: 50% ;
 }
+/*Ajuste márgenes títulos enlazados a listas en la barra de navegación*/
+#quienes_somos, #nuestra_comida, #ubicacion{
+    padding-top: 3em;
+}
+

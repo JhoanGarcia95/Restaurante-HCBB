@@ -1,5 +1,6 @@
 var currentTab=0;
 var x=document.getElementsByClassName("tag");
+var indice_previa=0;
 
 //Usuario temporal
 const user=["usuario21","admin1234"];
@@ -29,6 +30,7 @@ function mostrar(n){
 function refresh(){
     document.getElementById("usuario_incorrecto").style.visibility="hidden";
 }
+
 //Validación ingreso de datos en cajas de texto y usuario y contraseña
 function validacion(){
     var y, i, valido=true;
@@ -57,7 +59,7 @@ function validacion(){
             break
         case 1:
             //Botones de selección tipo radio
-            const radio=document.getElementsByName("actualizacion_menu");
+            var radio=document.getElementsByName("actualizacion_menu");
             valido=false;
             for (i=0;i<radio.length;i++){
                 if(radio[i].checked){
@@ -65,6 +67,16 @@ function validacion(){
                 }
             }
             if(!valido){document.getElementById("mens_error").style.display="block"}
+            //Acivación entrada nombre del plato o lista de selección según botón radio activo siguiente página
+            var selec_plato=document.getElementsByClassName("platos");
+            for (i=0;i<selec_plato.length;i++){
+                selec_plato[i].style.display="none";
+            }
+            if(radio[0].checked){
+                selec_plato[0].style.display="block";
+            }else{
+                selec_plato[1].style.display="block";
+            }
             break
         case 2:
             //Datos del plato - Validación para selección de plato y caja de texto tipo textarea
@@ -73,6 +85,7 @@ function validacion(){
                 valido=false;
             }
             if(!valido){document.getElementById("mens_error").style.display="block"}
+                        
             break
         }
     return valido;
@@ -81,6 +94,9 @@ function validacion(){
 //Función a ejecutarse en los botones de atrás / siguiente
 function btnPrev(n){
     if (n==1 && !validacion()) {return false} //Evaluación validación cuando se oprime el botón siguiente
+    else{
+        document.getElementById("mens_error").style.display="none";
+    }
     x[currentTab].style.display="none"; //Oculta pestaña actual
     currentTab=currentTab+n;
     if (currentTab>=x.length){
@@ -120,4 +136,22 @@ function stepCreation(){
         ind.setAttributeNode(att); //Adición nodo atributo al nodo elemento
         cont.appendChild(ind); //Adición nodo span al div indicador
     }
+}
+
+//Función de vista previa del plato creado/modificado
+function previa(){
+    var validar=validacion();
+    if (validar){
+        if (indice_previa==0){
+            document.getElementById("column").style.display="inline";
+            indice_previa=1;
+        }else{
+            document.getElementById("column").style.display="none";
+            indice_previa=0;
+        }
+    }else{
+        document.getElementById("mens_error").style.display="block";
+    }
+    
+    
 }

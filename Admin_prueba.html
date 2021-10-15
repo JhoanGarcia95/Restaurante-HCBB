@@ -34,69 +34,92 @@
             <!--Aquí va el contenido de la página-->
             <div class="formulario">
                 <h1>¿Cuál es nuestro próximo menú?</h1>
-                <form action="" id="modificacion_menu">
-                    <div class="tag">
-                        <!--Pestaña de ingreso-->
-                        <h3>Ingreso de empleados</h3>
-                        <input type="text" placeholder="Usuario" id="usuario" oninput="this.className='',refresh()">
-                        <input type="password" placeholder="Contraseña" id="password" oninput="this.className=''">
-                    </div>
-                    <div class="tag">
-                        <h3>¿Qué deseas hacer hoy?</h3>
-                        <div id="radio_button">
-                            <div>
-                                <input type="radio" id="nuevo_menu" name="actualizacion_menu" value="Agregar">
-                                <label for="nuevo_menu">Agregar un nuevo plato</label>
-                            </div>
-                            <div>
-                                <input type="radio" id="cambiar_menu" name="actualizacion_menu" value="Actualizar">
-                                <label for="cambiar_menu">Actualizar un plato</label>
+                <div id="cont_interno">
+                    <form action="" id="modificacion_menu">
+                        <div class="tag">
+                            <!--Pestaña de ingreso-->
+                            <h3>Ingreso de empleados</h3>
+                            <input type="text" placeholder="Usuario" id="usuario" oninput="this.className='',refresh()">
+                            <input type="password" placeholder="Contraseña" id="password" oninput="this.className=''">
+                        </div>
+                        <div class="tag">
+                            <h3>¿Qué deseas hacer hoy?</h3>
+                            <div id="radio_button">
+                                <div>
+                                    <input type="radio" id="nuevo_menu" name="actualizacion_menu" value="Agregar">
+                                    <label for="nuevo_menu">Agregar un nuevo plato</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="cambiar_menu" name="actualizacion_menu" value="Actualizar">
+                                    <label for="cambiar_menu">Actualizar un plato</label>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="tag" id="cambios">
-                        <div id="seleccion">
-                            <br><label for="seleccion_plato">Selecciona el plato que deseas actualizar</label><br>
-                            <!--Lista de selección para cuando se desea modificar los atributos de un menú ya existente-->
-                            <select name="seleccion_plato" id="lista_seleccion" class="input">
-                                <option value="--">---------</option>
-                                <option value="arroz-Atollado">Arroz Atollado</option>
-                                <option value="arroz-Camarones">Arroz con camarones</option>
-                                <option value="arroz-Carnes">Arroz con carnes</option>
-                                <option value="arroz-Paisa">Arroz paisa</option>
-                                <option value="arroz-Pollo">Arroz con pollo</option>
-                                <option value="Bagre-salsa">Bagre en salsa</option>
-                                <option value="Chuleta-valluna">Chuleta valluna</option>
-                                <option value="Corrientazo-tipico">Corrientazo típico</option>
-                                <option value="Poteca-ahuyama">Poteca de ahuyama</option>
-                                <option value="Sancocho-trifasico">Sancocho trifásico</option>
-                                <option value="Sobrebarriga">Sobrebarriga</option>
-                                <option value="Sopa-arroz">Sopa de arroz</option>
-                            </select><br>
+                        <div class="tag" id="cambios">
+                            <div id="nombre_plato" class="platos">
+                                <label for="plato">Nombre del nuevo plato</label>
+                                <input type="text" name="plato" oninput="this.className=''">
+                            </div>
+                            <div id="seleccion" class="platos">
+                                <br><label for="seleccion_plato">Selecciona el plato que deseas actualizar</label><br>
+                                <!--Lista de selección para cuando se desea modificar los atributos de un menú ya existente-->
+                                <select name="seleccion_plato" id="lista_seleccion" class="input">
+                                    <option value="--">---------</option>
+                                    <option value="arroz-Atollado">Arroz Atollado</option>
+                                    <option value="arroz-Camarones">Arroz con camarones</option>
+                                    <option value="arroz-Carnes">Arroz con carnes</option>
+                                    <option value="arroz-Paisa">Arroz paisa</option>
+                                    <option value="arroz-Pollo">Arroz con pollo</option>
+                                    <option value="Bagre-salsa">Bagre en salsa</option>
+                                    <option value="Chuleta-valluna">Chuleta valluna</option>
+                                    <option value="Corrientazo-tipico">Corrientazo típico</option>
+                                    <option value="Poteca-ahuyama">Poteca de ahuyama</option>
+                                    <option value="Sancocho-trifasico">Sancocho trifásico</option>
+                                    <option value="Sobrebarriga">Sobrebarriga</option>
+                                    <option value="Sopa-arroz">Sopa de arroz</option>
+                                </select><br>
+                            </div>
+                            <br><label for="descripcion">Agrega la descripción del plato</label><br>
+                            <textarea name="descripcion" id="descripcion" oninput="this.className=''" cols="40" rows="5"></textarea><br>
+                            <br><label for="precio">¿Cuál será su precio de venta? $</label>
+                            <input type="number" name="precio" id="precio" class="input" min="0" max="100000" step="1000" value="8000"><br>
+                            <br><label for="img_plato">Agrega una imagen de cómo luce el plato</label><br>
+                            <input type="file" name="img_plato" id="img_plato" oninput="this.className=''"><br>
                         </div>
-                        <br><label for="descripcion">Agrega la descripción del plato</label><br>
-                        <textarea name="descripcion" id="descripcion" oninput="this.className=''" cols="40" rows="5"></textarea><br>
-                        <br><label for="precio">¿Cuál será su precio de venta? $</label>
-                        <input type="number" name="precio" id="precio" class="input" min="0" max="100000" step="1000" value="8000"><br>
-                        <br><label for="img_plato">Agrega una imagen de cómo luce el plato</label><br>
-                        <input type="file" name="img_plato" id="img_plato" oninput="this.className=''"><br>
-                    </div>
-                    <p id="mens_error">Faltan campos por completar.</p>
-                    <p id="usuario_incorrecto">Usuario y/o contraseña incorrectos</p>
-                    <div id="exito">
-                        <img src="imagenes/preparando003.gif" alt="Formulario enviado" id="imgFormAdmin">
-                        <h3>Datos del plato guardados con éxito.</h3>
-                    </div>
-                    <div class="button">
-                        <button type="button" id="vistaPrev" onclick="">Vista Previa</button>
-                        <button type="button" id="btnAnt" onclick="btnPrev(-1)">Atrás</button>
-                        <button type="button" id="btnSig" onclick="btnPrev(1)">Continuar</button>
-                    </div>
-                    
-                    <div id="indicador">
-                        <!--Elementos creados automáticamente desde JS-->
-                    </div>
-                </form>
+                        <p id="mens_error">Faltan campos por completar.</p>
+                        <p id="usuario_incorrecto">Usuario y/o contraseña incorrectos</p>
+                        <div id="exito">
+                            <img src="imagenes/preparando003.gif" alt="Formulario enviado" id="imgFormAdmin">
+                            <h3>Datos del plato guardados con éxito.</h3>
+                        </div>
+                        <div class="button">
+                            <button type="button" id="vistaPrev" onclick="previa()">Vista Previa</button>
+                            <button type="button" id="btnAnt" onclick="btnPrev(-1)">Atrás</button>
+                            <button type="button" id="btnSig" onclick="btnPrev(1)">Continuar</button>
+                        </div>
+                        
+                        <div id="indicador">
+                            <!--Elementos creados automáticamente desde JS-->
+                        </div>
+                    </form>
+                    <!--Vista previa del plato-->
+                    <div id="column">
+                        <div class="imagen_plato">
+                            <img src="imagenes/arroz-Carnes.jpg" class="d-block w-100" alt="...">
+                        </div>                              
+                        <div class="overlay">
+                            <div class="texto">
+                                <h2><b>Arroz con Carnes</b></h2>
+                                <hr>
+                                <p>Al arroz se le pueden agregar infinidad de acompañantes
+                                y crear combinaciones maravillosas. <br>Hoy decidimos combinar arroz con pollo y chorizo.<br>
+                                </p>
+                                <p><strong>Ingredientes:</strong> chorizos, arroz, pollo asado, zanahoria, alverjas, granos de maíz.<br>
+                                </p> 
+                            </div>
+                        </div>     
+                    </div> 
+                </div>
             </div>
         </div>
         <footer>

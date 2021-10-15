@@ -81,6 +81,7 @@ button{
     font-size: 16px;
     padding: 3px 13px;
 }
+
 #vistaPrev{
     display: none;
 }
@@ -98,6 +99,14 @@ button{
     margin-right: 1%;
     background-color: black;
 }
+#cont_interno{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    transition: justify-content 1s;
+}
 #exito{
     display: none;
     text-align: center;
@@ -106,4 +115,8 @@ button{
     width: 80%;
     height: auto;
     align-self: center;
+}
+/*Estilos vista previa plato*/
+#column{
+    display: none;
 }
