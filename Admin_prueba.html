@@ -57,13 +57,13 @@
                         </div>
                         <div class="tag" id="cambios">
                             <div id="nombre_plato" class="platos">
-                                <label for="plato">Nombre del nuevo plato</label>
-                                <input type="text" name="plato" oninput="this.className=''">
+                                <br><label for="plato">Nombre del nuevo plato</label>
+                                <input type="text" name="plato" id="nuevo_nombre" oninput="this.className=''">
                             </div>
                             <div id="seleccion" class="platos">
                                 <br><label for="seleccion_plato">Selecciona el plato que deseas actualizar</label><br>
                                 <!--Lista de selección para cuando se desea modificar los atributos de un menú ya existente-->
-                                <select name="seleccion_plato" id="lista_seleccion" class="input">
+                                <select name="seleccion_plato" id="lista_seleccion" >
                                     <option value="--">---------</option>
                                     <option value="arroz-Atollado">Arroz Atollado</option>
                                     <option value="arroz-Camarones">Arroz con camarones</option>
@@ -79,9 +79,11 @@
                                     <option value="Sopa-arroz">Sopa de arroz</option>
                                 </select><br>
                             </div>
-                            <br><label for="descripcion">Agrega la descripción del plato</label><br>
-                            <textarea name="descripcion" id="descripcion" oninput="this.className=''" cols="40" rows="5"></textarea><br>
-                            <br><label for="precio">¿Cuál será su precio de venta? $</label>
+                            <label for="descripcion">Agrega la descripción del plato</label><br>
+                            <textarea name="descripcion" id="descripcion"  cols="40" rows="3"></textarea><br>
+                            <label for="ingredientes">Agrega los ingredientes del plato</label><br>
+                            <textarea name="ingredientes" id="ingredientes"  cols="40" rows="2"></textarea><br>
+                            <label for="precio">¿Cuál será su precio de venta? $</label>
                             <input type="number" name="precio" id="precio" class="input" min="0" max="100000" step="1000" value="8000"><br>
                             <br><label for="img_plato">Agrega una imagen de cómo luce el plato</label><br>
                             <input type="file" name="img_plato" id="img_plato" oninput="this.className=''"><br>
@@ -104,18 +106,15 @@
                     </form>
                     <!--Vista previa del plato-->
                     <div id="column">
-                        <div class="imagen_plato">
-                            <img src="imagenes/arroz-Carnes.jpg" class="d-block w-100" alt="...">
+                        <div class="imagen_plato" id="imagen_plato_prev">
+                            <img src="" id="img_plato_prev" alt="plato_preview">
                         </div>                              
                         <div class="overlay">
                             <div class="texto">
-                                <h2><b>Arroz con Carnes</b></h2>
+                                <h2><b id="nombre_plato_prev"></b></h2>
                                 <hr>
-                                <p>Al arroz se le pueden agregar infinidad de acompañantes
-                                y crear combinaciones maravillosas. <br>Hoy decidimos combinar arroz con pollo y chorizo.<br>
-                                </p>
-                                <p><strong>Ingredientes:</strong> chorizos, arroz, pollo asado, zanahoria, alverjas, granos de maíz.<br>
-                                </p> 
+                                <p id="descripcion_plato_prev"></p>
+                                <p id="ingredientes_prev"><strong>Ingredientes:</strong> </p> 
                             </div>
                         </div>     
                     </div> 

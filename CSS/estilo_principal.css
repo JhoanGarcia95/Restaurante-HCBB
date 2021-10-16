@@ -21,7 +21,7 @@
     width: 25%;
     border-radius: 50%;
 }
-/*angie-nuestra comida*/
+
 .img_verduras img{
     position: relative;
     justify-content: center;
@@ -34,24 +34,34 @@
 .p1{
     font-size: 1.5em;
 }
-aside{
+.platos{
     text-align: center;
     background-color: rgb(249, 168, 37);
     font-size: 2em;
 }
-/*angie-nuestra comida*/
+/*nuestra comida*/
 .donde_estamos h2{
     font-size: xx-large;
     text-align: center;
 }
 .cont_principal{
-   display: inline-flex;
-}
-.p2{
-    opacity: 50% ;
-}
-/*Ajuste márgenes títulos enlazados a listas en la barra de navegación*/
-#quienes_somos, #nuestra_comida, #ubicacion{
-    padding-top: 3em;
+    display: block;
+    text-align: center;
+
 }
 
+.titulo{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3em;
+    text-align: center;
+}
+tr,th,td {
+    width: 5%;
+    border:1px solid black;
+    border-radius: 10px; 
+    padding-top: 5px;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    padding-right: 1px;  
+    
+}

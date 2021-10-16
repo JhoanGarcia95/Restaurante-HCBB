@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="CSS/estilo_admin.css">
     <script src="JS/admin.js"></script>
 </head>
-<body>
+<body onload="stepCreation(),mostrar(0)">
     <div class="marco_principal">
         <nav class="barra_navegacion">
             <img src="imagenes/logo.png" id="logo" alt="Logo">
@@ -34,57 +34,100 @@
             <!--Aquí va el contenido de la página-->
             <div class="formulario">
                 <h1>¿Cuál es nuestro próximo menú?</h1>
-                <form id="modificacion_menu">
-                    <div class="pag">
-                        <p><input type="text" placeholder="Usuario" oninput="this.className=''"></p>
-                        <input type="text" placeholder="Contraseña" oninput="this.className=''">
-                    </div>
-                    <div class="pag">
-                        <label for="modif_menu"><h3>¿Qué deseas hacer hoy?</h3></label>
-                        <input type="radio" id="nuevo_menu" name="actualizacion_menu" value="Agregar">
-                        <label for="nuevo_menu">Agregar un nuevo plato</label>
-                        <input type="radio" id="cambiar_menu" name="actualizacion_menu" value="Actualizar">
-                        <label for="cambiar_menu">Actualizar un plato</label><br><br>
-                    </div>
-                    <div class="pag">
-                        <div id="seleccion">
-                            <label for="seleccion_plato">Selecciona el plato que deseas actualizar</label><br>
-                            <!--Lista de selección para cuando se desea modificar los atributos de un menú ya existente-->
-                            <select name="seleccion_plato" id="lista_seleccion" class="input">
-                                <option>---------</option>
-                                <option>Plato 1</option>
-                                <option>Plato 2</option>
-                                <option>Plato 3</option>
-                                <option>Plato 4</option>
-                            </select><br><br>
+                <div id="cont_interno">
+                    <form action="" id="modificacion_menu">
+                        <div class="tag">
+                            <!--Pestaña de ingreso-->
+                            <h3>Ingreso de empleados</h3>
+                            <input type="text" placeholder="Usuario" id="usuario" oninput="this.className='',refresh()">
+                            <input type="password" placeholder="Contraseña" id="password" oninput="this.className=''">
                         </div>
-                        <label for="descripcion">Agrega la descripción del plato</label><br>
-                        <textarea name="descripcion" id="descripcion" class="input" cols="40" rows="10"></textarea><br><br>
-                        <label for="precio">¿Cuál será su precio de venta? $</label>
-                        <input type="number" name="precio" id="precio" class="input" min="0" max="100000" step="1000" value="8000"><br><br>
-                        <label for="img_plato">Agrega una imagen de cómo luce el plato</label><br><br>
-                        <input type="file" name="img_plato" id="img_plato" class="input"><br><br>
-                    </div>  
-                    <div class="botones">
-                        <button type="button" id="atras" onclick="mostrarPag(-1)">Atrás</button>
-                        <button type="button" id="siguiente" onclick="mostrarPag(1)">Continuar</button>
-                    </div>
-                    <!--Indicativos páginas del formulario-->
-                    <div style="text-align: center; margin-top: 40px;">
-                        <span class="step"></span>
-                        <span class="step"></span>
-                        <span class="step"></span>
-                    </div>
-                </form>
+                        <div class="tag">
+                            <h3>¿Qué deseas hacer hoy?</h3>
+                            <div id="radio_button">
+                                <div>
+                                    <input type="radio" id="nuevo_menu" name="actualizacion_menu" value="Agregar">
+                                    <label for="nuevo_menu">Agregar un nuevo plato</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="cambiar_menu" name="actualizacion_menu" value="Actualizar">
+                                    <label for="cambiar_menu">Actualizar un plato</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tag" id="cambios">
+                            <div id="nombre_plato" class="platos">
+                                <br><label for="plato">Nombre del nuevo plato</label>
+                                <input type="text" name="plato" id="nuevo_nombre" oninput="this.className=''">
+                            </div>
+                            <div id="seleccion" class="platos">
+                                <br><label for="seleccion_plato">Selecciona el plato que deseas actualizar</label><br>
+                                <!--Lista de selección para cuando se desea modificar los atributos de un menú ya existente-->
+                                <select name="seleccion_plato" id="lista_seleccion" >
+                                    <option value="--">---------</option>
+                                    <option value="arroz-Atollado">Arroz Atollado</option>
+                                    <option value="arroz-Camarones">Arroz con camarones</option>
+                                    <option value="arroz-Carnes">Arroz con carnes</option>
+                                    <option value="arroz-Paisa">Arroz paisa</option>
+                                    <option value="arroz-Pollo">Arroz con pollo</option>
+                                    <option value="Bagre-salsa">Bagre en salsa</option>
+                                    <option value="Chuleta-valluna">Chuleta valluna</option>
+                                    <option value="Corrientazo-tipico">Corrientazo típico</option>
+                                    <option value="Poteca-ahuyama">Poteca de ahuyama</option>
+                                    <option value="Sancocho-trifasico">Sancocho trifásico</option>
+                                    <option value="Sobrebarriga">Sobrebarriga</option>
+                                    <option value="Sopa-arroz">Sopa de arroz</option>
+                                </select><br>
+                            </div>
+                            <label for="descripcion">Agrega la descripción del plato</label><br>
+                            <textarea name="descripcion" id="descripcion"  cols="40" rows="3"></textarea><br>
+                            <label for="ingredientes">Agrega los ingredientes del plato</label><br>
+                            <textarea name="ingredientes" id="ingredientes"  cols="40" rows="2"></textarea><br>
+                            <label for="precio">¿Cuál será su precio de venta? $</label>
+                            <input type="number" name="precio" id="precio" class="input" min="0" max="100000" step="1000" value="8000"><br>
+                            <br><label for="img_plato">Agrega una imagen de cómo luce el plato</label><br>
+                            <input type="file" name="img_plato" id="img_plato" oninput="this.className=''"><br>
+                        </div>
+                        <p id="mens_error">Faltan campos por completar.</p>
+                        <p id="usuario_incorrecto">Usuario y/o contraseña incorrectos</p>
+                        <div id="exito">
+                            <img src="imagenes/preparando003.gif" alt="Formulario enviado" id="imgFormAdmin">
+                            <h3>Datos del plato guardados con éxito.</h3>
+                        </div>
+                        <div class="button">
+                            <button type="button" id="vistaPrev" onclick="previa()">Vista Previa</button>
+                            <button type="button" id="btnAnt" onclick="btnPrev(-1)">Atrás</button>
+                            <button type="button" id="btnSig" onclick="btnPrev(1)">Continuar</button>
+                        </div>
+                        
+                        <div id="indicador">
+                            <!--Elementos creados automáticamente desde JS-->
+                        </div>
+                    </form>
+                    <!--Vista previa del plato-->
+                    <div id="column">
+                        <div class="imagen_plato" id="imagen_plato_prev">
+                            <img src="" id="img_plato_prev" alt="plato_preview">
+                        </div>                              
+                        <div class="overlay">
+                            <div class="texto">
+                                <h2><b id="nombre_plato_prev"></b></h2>
+                                <hr>
+                                <p id="descripcion_plato_prev"></p>
+                                <p id="ingredientes_prev"><strong>Ingredientes:</strong> </p> 
+                            </div>
+                        </div>     
+                    </div> 
+                </div>
             </div>
         </div>
         <footer>
             <div class="ingreso">
                 <p>Visitanos en www.restaurante-hcbb.com</p> 
                 <div class="redes_sociales">
-                    <img src="imagenes/logo_facebook.png" width="40">
-                    <img src="imagenes/logo_whatsapp.png" width="40">
-                    <img src="imagenes/logo_instagram.png" width="40">
+                    <img src="imagenes/logo_facebook.png">
+                    <img src="imagenes/logo_whatsapp.png">
+                    <img src="imagenes/logo_instagram.png">
                 </div>
                 <a href="Administrador.html" id="ingresar"><strong>Ingreso empleados</strong></a>
             </div>

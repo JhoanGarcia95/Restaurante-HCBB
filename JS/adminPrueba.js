@@ -34,6 +34,7 @@ function refresh(){
 //Validación ingreso de datos en cajas de texto y usuario y contraseña
 function validacion(){
     var y, i, valido=true;
+    var radio=document.getElementsByName("actualizacion_menu"); //Variable botones tipo radio
     y=x[currentTab].getElementsByTagName("input");
     document.getElementById("mens_error").style.display="none";
     document.getElementById("usuario_incorrecto").style.visibility="hidden";
@@ -59,7 +60,6 @@ function validacion(){
             break
         case 1:
             //Botones de selección tipo radio
-            var radio=document.getElementsByName("actualizacion_menu");
             valido=false;
             for (i=0;i<radio.length;i++){
                 if(radio[i].checked){
@@ -79,13 +79,23 @@ function validacion(){
             }
             break
         case 2:
-            //Datos del plato - Validación para selección de plato y caja de texto tipo textarea
+            //Datos del plato - Validación para selección de plato y cajas de texto tipo textarea
             var sel=document.getElementById("lista_seleccion").selectedIndex;
-            if(sel==0 || document.getElementById("descripcion").value==""){
+            //Ajuste validación según la opción radio seleccionada
+            //Eliminación validación incorrecta para entrada de nombre del plato si la opción selec. fue actualizar un plato
+            if(radio[1].checked){
+                document.getElementById("nuevo_nombre").className-=" invalido";
+                valido=true;
+                if(sel==0){
+                    valido=false;
+                }//Validación selección del plato
+            }
+            //Validación entradas tipo textarea
+            const area=document.getElementsByTagName("textarea");
+            if(area[0].value==""){
                 valido=false;
             }
-            if(!valido){document.getElementById("mens_error").style.display="block"}
-                        
+            if(!valido){document.getElementById("mens_error").style.display="block"}          
             break
         }
     return valido;
@@ -96,6 +106,7 @@ function btnPrev(n){
     if (n==1 && !validacion()) {return false} //Evaluación validación cuando se oprime el botón siguiente
     else{
         document.getElementById("mens_error").style.display="none";
+        document.getElementById("column").style.display="none";
     }
     x[currentTab].style.display="none"; //Oculta pestaña actual
     currentTab=currentTab+n;
@@ -144,13 +155,51 @@ function previa(){
     if (validar){
         if (indice_previa==0){
             document.getElementById("column").style.display="inline";
+            //Retorno datos suministrados por el usuario para creación de vista previa
+            //1. Revisión botón radio seleccionado -> variable radio ya creada antes
+            var radio=document.getElementsByName("actualizacion_menu"); //Variable botones tipo radio;
+            const titulo=document.getElementById("nombre_plato_prev");
+            if(radio[0].checked){
+                titulo.innerHTML=document.getElementById("nuevo_nombre").value;//Asignación del nuevo nombre
+            }else if(radio[1].checked){
+                //Revisión opción seleccionada de la lista de selección de platos y asignación del nombre a la vista previa
+                const opt=document.getElementsByTagName("option");
+                for (i=0;i<opt.length;i++){
+                    if (opt[i].selected){
+                        titulo.innerHTML=opt[i].innerHTML;
+                        break;
+                    }
+                }
+            }
+
+            //Descripción del plato
+            document.getElementById("descripcion_plato_prev").innerHTML=document.getElementById("descripcion").value;
+            //Ingredientes del plato
+            document.getElementById("ingredientes_prev").innerHTML+=document.getElementById("ingredientes").value;
+            
+            //Previsualización imagen cargada - Tomado de:
+            //developer.mozilla.org/es/docs/Web/API/FileReader/readAsDataURL
+            var preview=document.getElementById("img_plato_prev");
+            var file=document.querySelector("input[type=file]").files[0];
+            //Creación objeto clase FileReader
+            var reader=new FileReader();
+
+            reader.onloadend=function(){
+                preview.src=reader.result; //Asignación ruta URL de la imagen cargada al elemento img de la vista previa
+            }
+            if(file){//Revisión si hay archivo cargado para asignación URL
+                reader.readAsDataURL(file);
+            }else{
+                preview.src="";
+            }         
+
             indice_previa=1;
         }else{
             document.getElementById("column").style.display="none";
             indice_previa=0;
         }
     }else{
-        document.getElementById("mens_error").style.display="block";
+        document.getElementById("mens_error").style.display="block"; 
     }
     
     
